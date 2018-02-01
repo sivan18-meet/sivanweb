@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Post</title>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/css.css') }}">
+</head>
+<body>	
+
+<div style="font-size: 22px;">
+
+	<h1 class="h1">Post a riddle of your own!</h1>
+	<a href="{{url_for('my_feed')}}"><button type="button" style="color: black" class="button">Cancel</button></a>
+	<form action="{{url_for('post')}}", method="post">
+	<input type="submit" class="button" style="color: black" name="post"><br>
+	<div style="text-align: center;">
+		Title:<br>
+		<input type="text" name="title" placeholder="What do you want to discuss today?" style="color: black;"> <br>
+		Nickname:
+		<br>
+		<input type="text" name="nickname" placeholder="Pick a nickname" style="color: black;"> <br>
+		Category:
+		<br>
+		<input type="radio" name="category" value="Dilemma">Dilemma
+		<br>
+		<input type="radio" name="category" value="Paradox">Paradox
+		<br>
+		<input type="radio" name="category" value="Brain Teaser">Brain Teaser
+		<br>
+		<input type="radio" name="category" value="Other">Other
+		<br> Riddle:
+		<br>
+		<textarea style="color: black;" placeholder="Type Here" name="debate"></textarea>
+	</div>
+</div>	
+<br>
+<br>
+</form>
+</div>
+</body>
+</html> 

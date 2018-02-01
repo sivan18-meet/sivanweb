@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Debate</title>
+
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='static/css.css') }}">
+      <link rel=stylesheet type=text/css href="../static/css/css.css">
+
+      <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+      <style type="text/css">
+
+      </style>
+</head>
+<body>
+<br>
+<center>
+<div class="box">
+
+
+      Title :{{post.title}}
+  <br>Nickname :{{post.nickname}}
+  <br>Category : {{post.category}}
+  <br>{{post.debate}}
+
+        
+  
+      
+        <form action="{{url_for('add_comment', post_id=post.id)}}" method="post">
+<br>
+        <input type="text" class="" name="comment"> <br>
+        <input type="submit" value="submit">
+        <a href="{{url_for('my_feed')}}"><button type="button" style="color: black">Cancel</button></a>
+      </form>
+      <br>
+
+  </div>
+  <br>
+
+
+  
+ 
+
+   
+</div>
+<div style="height: auto">
+     
+     {% for comment in post.comments %}
+     <div class="box">
+      {{comment.comment}}
+        </div>
+        <br>
+         {%endfor%}
+        
+      </div>
+</center>
+
+
+
+
+</body>
+</html>
