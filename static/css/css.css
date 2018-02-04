@@ -1,5 +1,6 @@
 .h1 {
-font-family: 'Alegreya Sans SC'}
+font-family: 'Alegreya Sans SC';
+font-size: 55px;}
  html,body {
   background-image: url("wood.jpeg");
   font-family: 'Alegreya Sans SC';
@@ -69,7 +70,7 @@ a:hover {
 
 .button {
   border-radius: 4px;
-  background-color: #D2FDFF;
+  background-color: #E0EFFF;
   border: none;
   color: black;
   text-align: center;
@@ -127,7 +128,7 @@ h1 {
   border: 3px solid #465362;
   border-radius: 20px/50px;
   background-clip: padding-box;
-  background-color: #D2FDFF;
+  background-color: #E0EFFF;
   background-color-opacity: 50%;
   text-align: center;
 }
